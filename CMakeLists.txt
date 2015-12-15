@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.0)
+set(CMAKE_VERBOSE_MAKEFILE on)
+find_package(PythonLibs 3.3  REQUIRED)
+include_directories(${PYTHON_INCLUDE_DIRS})
+python_add_module(viterbi viterbi.cpp)
+target_link_libraries(viterbi ${PYTHON_LIBRARIES})
